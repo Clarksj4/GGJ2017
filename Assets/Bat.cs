@@ -20,4 +20,9 @@ public class Bat : MonoBehaviour
         input = Mathf.Clamp(input, -1, 1);
         transform.Rotate(transform.up, MaxTurnSpeed * input * Time.deltaTime);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+
+    }
 }
