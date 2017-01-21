@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MouseMove : MonoBehaviour {
 
-    private Bat bat;
+    public int[] SonarButtons = new int[] { 0 };
 
+    private Bat bat;
     private Vector3 screenPosition;
     private float yDistanceToScreenTop;
     private float xDistanceToScreenSide;
@@ -34,5 +35,19 @@ public class MouseMove : MonoBehaviour {
         float xDelta = xDistanceFromBat / xDistanceToScreenSide;
 
         bat.Turn(xDelta);
+
+        if (AnyButtonPressed(SonarButtons))
+            bat.SonarPing();
+    }
+
+    bool AnyButtonPressed(int[] buttons)
+    {
+        foreach (int button in buttons)
+        {
+            if (Input.GetMouseButtonDown(button))
+                return true;
+        }
+
+        return false;
     }
 }
