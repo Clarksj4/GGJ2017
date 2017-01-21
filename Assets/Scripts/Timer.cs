@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
@@ -14,11 +15,11 @@ public class Timer : MonoBehaviour {
     }
     void Update()
     {
-        timeLeft -= Time.deltaTime;
-        timeDisplay.text = timeLeft.ToString("0.00");
-        if (timeLeft < 0)
+        timeLeft -= Time.deltaTime;      
+        if (timeLeft <= 0)
         {
-
+            SceneManager.GetActiveScene(); SceneManager.LoadScene("LevelGood");
         }
+        timeDisplay.text = timeLeft.ToString("0.00");
     }
 }
