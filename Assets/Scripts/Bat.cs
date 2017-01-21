@@ -37,7 +37,7 @@ public class Bat : MonoBehaviour
     {
         // If thing is a powerup
         // tell power up to be collected
-        Pickup pickup = other.GetComponentInParent<Pickup>();
+        Pickup pickup = other.GetComponent<Pickup>();
         if (pickup != null)
             pickup.Vanish(other.transform.position + Vector3.down * 10);
     }
