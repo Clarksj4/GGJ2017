@@ -10,17 +10,21 @@ public class Pickup : MonoBehaviour
     public Transform model;
     public float RotateSpeed = 100;
     public float VanishDuration = 0.5f;
+    public float HighlightDuration = 1;
+    [Range(0, 8)]
+    public float HighlightIntensity = 5;
+    public ParticleSystem PickupParticles;
+    public Light Highlight;
 
+    private Coroutine highlighting;
     private Coroutine vanishing;
-    private new ParticleSystem particleSystem;
     private PickupManager manager;
 
     void Awake()
     {
         manager = GetComponentInParent<PickupManager>();
-        particleSystem = GetComponentInChildren<ParticleSystem>();
 
-        StartCoroutine(Rotate());
+        StartCoroutine(DoRotate());
     }
 
     public void Vanish(Vector3 destination)
@@ -31,12 +35,17 @@ public class Pickup : MonoBehaviour
                 Vanishing(this, new EventArgs());
 
             StopAllCoroutines();
-            particleSystem.Play();
-            vanishing = StartCoroutine(MoveToAndShrink(destination, VanishDuration));
+            vanishing = StartCoroutine(DoVanish(destination, VanishDuration));
         }
     }
 
-    IEnumerator Rotate()
+    public void Ping()
+    {
+        if (highlighting == null)
+            highlighting = StartCoroutine(DoHighlight());
+    }
+
+    IEnumerator DoRotate()
     {
         while (true)
         {
@@ -45,8 +54,9 @@ public class Pickup : MonoBehaviour
         }
     }
 
-    IEnumerator MoveToAndShrink(Vector3 destination, float duration)
+    IEnumerator DoVanish(Vector3 destination, float duration)
     {
+        PickupParticles.Play();
         Vector3 initialPosition = model.position;
         Vector3 initialScale = model.localScale;
         float time = 0;
@@ -63,5 +73,34 @@ public class Pickup : MonoBehaviour
         }
 
         Destroy(gameObject);
+        vanishing = null;
+    }
+
+    IEnumerator DoHighlight()
+    {
+        Highlight.enabled = true;
+        Highlight.intensity = 0;
+
+        float time = 0;
+        while (time < HighlightDuration)
+        {
+            float t = (time / HighlightDuration);
+
+            // First half of highlight
+            if (time < (HighlightDuration / 2))
+                t /= 0.5f;
+            else
+                t = 1 - t;
+
+            float intensity = Mathf.Lerp(0, HighlightIntensity, t);
+            Highlight.intensity = intensity;
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        Highlight.enabled = false;
+        Highlight.intensity = 0;
+        highlighting = null;
     }
 }

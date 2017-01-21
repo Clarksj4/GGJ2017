@@ -6,16 +6,12 @@ public class Bat : MonoBehaviour
 {
     public float MaxSpeed = 12;
     public float MaxTurnSpeed = 65;
-    public float SonarSpeed = 50;
-    public float SonarRange = 100;
 
-    private Coroutine sonarPulse;
-
-    private ScannerEffectDemo sonar;
+    private ScannerEffect sonar;
 
     void Awake()
     {
-        sonar = GetComponentInChildren<ScannerEffectDemo>();
+        sonar = GetComponentInChildren<ScannerEffect>();
     }
 
     // Value between 0 - 1
@@ -34,8 +30,7 @@ public class Bat : MonoBehaviour
 
     public void SonarPing()
     {
-        if (sonarPulse == null)
-            sonarPulse = StartCoroutine(PulseSonar());
+        sonar.Scan();
     }
 
     void OnTriggerEnter(Collider other)
@@ -45,21 +40,5 @@ public class Bat : MonoBehaviour
         Pickup pickup = other.GetComponentInParent<Pickup>();
         if (pickup != null)
             pickup.Vanish(other.transform.position + Vector3.down * 10);
-    }
-
-    IEnumerator PulseSonar()
-    {
-        sonar.ScanDistance = 0;
-
-        while (sonar.ScanDistance < SonarRange)
-        {
-            sonar.ScannerOrigin = transform;
-            sonar.ScanDistance += Time.deltaTime * SonarSpeed;
-
-            yield return null;
-        }
-
-        sonar.ScanDistance = 0;
-        sonarPulse = null;
     }
 }
