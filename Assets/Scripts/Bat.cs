@@ -8,10 +8,12 @@ public class Bat : MonoBehaviour
     public float MaxTurnSpeed = 65;
     public AudioSource pingSound;
 
+    private CharacterController controller;
     private ScannerEffect sonar;
 
     void Awake()
     {
+        controller = GetComponent<CharacterController>();
         sonar = GetComponentInChildren<ScannerEffect>();
     }
 
@@ -19,7 +21,7 @@ public class Bat : MonoBehaviour
     public void Move(float input)
     {
         input = Mathf.Clamp01(input);
-        transform.Translate(Vector3.forward * Time.deltaTime * MaxSpeed * input);
+        controller.Move(transform.forward * Time.deltaTime * MaxSpeed * input);
     }
 
     // Value between -1 - 1
