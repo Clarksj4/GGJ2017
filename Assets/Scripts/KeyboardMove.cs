@@ -8,6 +8,7 @@ public class KeyboardMove : MonoBehaviour
     public KeyCode[] Forward = new KeyCode[] { KeyCode.W, KeyCode.UpArrow };
     public KeyCode[] Left = new KeyCode[] { KeyCode.A, KeyCode.LeftArrow };
     public KeyCode[] Right = new KeyCode[] { KeyCode.D, KeyCode.RightArrow };
+    public KeyCode[] Sonar = new KeyCode[] { KeyCode.Space };
 
     private Bat bat;
 
@@ -27,6 +28,9 @@ public class KeyboardMove : MonoBehaviour
 
         if (AnyKeyPressed(Right))
             bat.Turn(1);
+
+        if (AnyKeyPressed(Sonar))
+            bat.SonarPing();
     }
 
     bool AnyKeyPressed(KeyCode[] keys)
