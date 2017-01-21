@@ -1,12 +1,14 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Scannable : MonoBehaviour
 {
-	public Animator UIAnim;
+    public MonoBehaviour target;
+    public string method;
 
 	public void Ping()
-	{
-		UIAnim.SetTrigger("Ping");
+    {
+        target.Invoke(method, 0);
     }
 }
