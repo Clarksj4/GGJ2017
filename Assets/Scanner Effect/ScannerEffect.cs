@@ -14,6 +14,8 @@ public class ScannerEffect : MonoBehaviour
     public float ScanSpeed = 50;
 	private Camera _camera;
 
+    public bool Scanning { get { return scanning; } }
+
     bool scanning;
 
     public void Scan()

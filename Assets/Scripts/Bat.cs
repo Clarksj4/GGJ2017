@@ -6,6 +6,7 @@ public class Bat : MonoBehaviour
 {
     public float MaxSpeed = 12;
     public float MaxTurnSpeed = 65;
+    public AudioSource pingSound;
 
     private ScannerEffect sonar;
 
@@ -30,7 +31,11 @@ public class Bat : MonoBehaviour
 
     public void SonarPing()
     {
-        sonar.Scan();
+        if (!sonar.Scanning)
+        {
+            sonar.Scan();
+            pingSound.Play();
+        }
     }
 
     void OnTriggerEnter(Collider other)
