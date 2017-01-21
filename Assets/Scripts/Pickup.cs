@@ -13,8 +13,11 @@ public class Pickup : MonoBehaviour
     public float HighlightDuration = 1;
     [Range(0, 8)]
     public float HighlightIntensity = 5;
+    [Range(0, 20)]
+    public float HighlightRange = 4;
     public ParticleSystem PickupParticles;
     public Light Highlight;
+    public AudioSource sound;
 
     private Coroutine highlighting;
     private Coroutine vanishing;
@@ -80,6 +83,8 @@ public class Pickup : MonoBehaviour
     {
         Highlight.enabled = true;
         Highlight.intensity = 0;
+        Highlight.range = HighlightRange;
+        sound.Play();
 
         float time = 0;
         while (time < HighlightDuration)
