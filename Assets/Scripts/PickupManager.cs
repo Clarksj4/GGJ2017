@@ -11,6 +11,7 @@ public class PickupManager : MonoBehaviour
     public Image pear;
     public Image avocado;
     public Image lemon;
+    public GameObject winScreen;
 
     private List<Pickup> pickups;
 
@@ -49,8 +50,11 @@ public class PickupManager : MonoBehaviour
 
         pickups.Remove(((Pickup)sender));
         if (pickups.Count == 0)
-            print("Game Over!");
-
+        {
+            winScreen.SetActive(true);
+        }
+            
+            
         print(pickups.Count + " pickups left");
     }
 }
