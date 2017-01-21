@@ -1,0 +1,688 @@
+fileFormatVersion: 2
+guid: 3b8aa131e1041844a8552da54ae61f32
+timeCreated: 1484962540
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bat - Vampire
+    100004: Body
+    100006: Body_back
+    100008: Body_front
+    100010: Camera01
+    100012: Camera01.Target
+    100014: Camera02
+    100016: Camera02.Target
+    100018: Camera03
+    100020: Camera03.Target
+    100022: Camera04
+    100024: Camera04.Target
+    100026: Camera05
+    100028: Camera05.Target
+    100030: Camera06
+    100032: Camera06.Target
+    100034: Camera07
+    100036: Camera07.Target
+    100038: Camera08
+    100040: Camera08.Target
+    100042: Camera09
+    100044: Camera09.Target
+    100046: Camera10
+    100048: Camera10.Target
+    100050: Camera11
+    100052: Camera11.Target
+    100054: Circle01
+    100056: Direct01
+    100058: Direct01.Target
+    100060: Direct02
+    100062: Direct02.Target
+    100064: Direct03
+    100066: Direct03.Target
+    100068: Ear_left
+    100070: Ear_right
+    100072: Head
+    100074: Jaw
+    100076: Neck
+    100078: Nose
+    100080: Omni08
+    100082: Omni09
+    100084: Omni11
+    100086: Omni12
+    100088: Omni13
+    100090: Paw_left_04
+    100092: Paw_left_05
+    100094: Paw_left_06
+    100096: Paw_left_finger_06
+    100098: Paw_left_finger_07
+    100100: Paw_left_finger_08
+    100102: Paw_right_01
+    100104: Paw_right_02
+    100106: Paw_right_03
+    100108: Paw_right_finger_01
+    100110: Paw_right_finger_02
+    100112: Paw_right_finger_03
+    100114: Paw_right_finger_04
+    100116: Paw_right_finger_05
+    100118: Sphere01
+    100120: Tail_01
+    100122: Tail_02
+    100124: Tail_03
+    100126: Tail_04
+    100128: Wing_left_01
+    100130: Wing_left_02
+    100132: Wing_left_finger1_01
+    100134: Wing_left_finger1_02
+    100136: Wing_left_finger2_01
+    100138: Wing_left_finger2_02
+    100140: Wing_left_finger2_03
+    100142: Wing_left_finger3_01
+    100144: Wing_left_finger3_02
+    100146: Wing_left_finger3_03
+    100148: Wing_left_finger4_01
+    100150: Wing_left_finger4_02
+    100152: Wing_left_finger4_3
+    100154: Wing_left_finger5_01
+    100156: Wing_left_finger5_02
+    100158: Wing_left_finger5_03
+    100160: Wing_left_hand
+    100162: Wing_right_01
+    100164: Wing_right_02
+    100166: Wing_right_03
+    100168: Wing_right_finger1_01
+    100170: Wing_right_finger1_02
+    100172: Wing_right_finger2_01
+    100174: Wing_right_finger2_02
+    100176: Wing_right_finger2_03
+    100178: Wing_right_finger3_01
+    100180: Wing_right_finger3_02
+    100182: Wing_right_finger3_03
+    100184: Wing_right_finger4_01
+    100186: Wing_right_finger4_02
+    100188: Wing_right_finger4_03
+    100190: Wing_right_finger5_01
+    100192: Wing_right_finger5_02
+    100194: Wing_right_finger5_03
+    400000: //RootNode
+    400002: Bat - Vampire
+    400004: Body
+    400006: Body_back
+    400008: Body_front
+    400010: Camera01
+    400012: Camera01.Target
+    400014: Camera02
+    400016: Camera02.Target
+    400018: Camera03
+    400020: Camera03.Target
+    400022: Camera04
+    400024: Camera04.Target
+    400026: Camera05
+    400028: Camera05.Target
+    400030: Camera06
+    400032: Camera06.Target
+    400034: Camera07
+    400036: Camera07.Target
+    400038: Camera08
+    400040: Camera08.Target
+    400042: Camera09
+    400044: Camera09.Target
+    400046: Camera10
+    400048: Camera10.Target
+    400050: Camera11
+    400052: Camera11.Target
+    400054: Circle01
+    400056: Direct01
+    400058: Direct01.Target
+    400060: Direct02
+    400062: Direct02.Target
+    400064: Direct03
+    400066: Direct03.Target
+    400068: Ear_left
+    400070: Ear_right
+    400072: Head
+    400074: Jaw
+    400076: Neck
+    400078: Nose
+    400080: Omni08
+    400082: Omni09
+    400084: Omni11
+    400086: Omni12
+    400088: Omni13
+    400090: Paw_left_04
+    400092: Paw_left_05
+    400094: Paw_left_06
+    400096: Paw_left_finger_06
+    400098: Paw_left_finger_07
+    400100: Paw_left_finger_08
+    400102: Paw_right_01
+    400104: Paw_right_02
+    400106: Paw_right_03
+    400108: Paw_right_finger_01
+    400110: Paw_right_finger_02
+    400112: Paw_right_finger_03
+    400114: Paw_right_finger_04
+    400116: Paw_right_finger_05
+    400118: Sphere01
+    400120: Tail_01
+    400122: Tail_02
+    400124: Tail_03
+    400126: Tail_04
+    400128: Wing_left_01
+    400130: Wing_left_02
+    400132: Wing_left_finger1_01
+    400134: Wing_left_finger1_02
+    400136: Wing_left_finger2_01
+    400138: Wing_left_finger2_02
+    400140: Wing_left_finger2_03
+    400142: Wing_left_finger3_01
+    400144: Wing_left_finger3_02
+    400146: Wing_left_finger3_03
+    400148: Wing_left_finger4_01
+    400150: Wing_left_finger4_02
+    400152: Wing_left_finger4_3
+    400154: Wing_left_finger5_01
+    400156: Wing_left_finger5_02
+    400158: Wing_left_finger5_03
+    400160: Wing_left_hand
+    400162: Wing_right_01
+    400164: Wing_right_02
+    400166: Wing_right_03
+    400168: Wing_right_finger1_01
+    400170: Wing_right_finger1_02
+    400172: Wing_right_finger2_01
+    400174: Wing_right_finger2_02
+    400176: Wing_right_finger2_03
+    400178: Wing_right_finger3_01
+    400180: Wing_right_finger3_02
+    400182: Wing_right_finger3_03
+    400184: Wing_right_finger4_01
+    400186: Wing_right_finger4_02
+    400188: Wing_right_finger4_03
+    400190: Wing_right_finger5_01
+    400192: Wing_right_finger5_02
+    400194: Wing_right_finger5_03
+    2300000: Body
+    2300002: Body_back
+    2300004: Body_front
+    2300006: Circle01
+    2300008: Ear_left
+    2300010: Ear_right
+    2300012: Head
+    2300014: Jaw
+    2300016: Neck
+    2300018: Nose
+    2300020: Paw_left_04
+    2300022: Paw_left_05
+    2300024: Paw_left_06
+    2300026: Paw_left_finger_06
+    2300028: Paw_left_finger_07
+    2300030: Paw_left_finger_08
+    2300032: Paw_right_01
+    2300034: Paw_right_02
+    2300036: Paw_right_03
+    2300038: Paw_right_finger_01
+    2300040: Paw_right_finger_02
+    2300042: Paw_right_finger_03
+    2300044: Paw_right_finger_04
+    2300046: Paw_right_finger_05
+    2300048: Sphere01
+    2300050: Tail_01
+    2300052: Tail_02
+    2300054: Tail_03
+    2300056: Tail_04
+    2300058: Wing_left_01
+    2300060: Wing_left_02
+    2300062: Wing_left_finger1_01
+    2300064: Wing_left_finger1_02
+    2300066: Wing_left_finger2_01
+    2300068: Wing_left_finger2_02
+    2300070: Wing_left_finger2_03
+    2300072: Wing_left_finger3_01
+    2300074: Wing_left_finger3_02
+    2300076: Wing_left_finger3_03
+    2300078: Wing_left_finger4_01
+    2300080: Wing_left_finger4_02
+    2300082: Wing_left_finger4_3
+    2300084: Wing_left_finger5_01
+    2300086: Wing_left_finger5_02
+    2300088: Wing_left_finger5_03
+    2300090: Wing_left_hand
+    2300092: Wing_right_01
+    2300094: Wing_right_02
+    2300096: Wing_right_03
+    2300098: Wing_right_finger1_01
+    2300100: Wing_right_finger1_02
+    2300102: Wing_right_finger2_01
+    2300104: Wing_right_finger2_02
+    2300106: Wing_right_finger2_03
+    2300108: Wing_right_finger3_01
+    2300110: Wing_right_finger3_02
+    2300112: Wing_right_finger3_03
+    2300114: Wing_right_finger4_01
+    2300116: Wing_right_finger4_02
+    2300118: Wing_right_finger4_03
+    2300120: Wing_right_finger5_01
+    2300122: Wing_right_finger5_02
+    2300124: Wing_right_finger5_03
+    3300000: Body
+    3300002: Body_back
+    3300004: Body_front
+    3300006: Circle01
+    3300008: Ear_left
+    3300010: Ear_right
+    3300012: Head
+    3300014: Jaw
+    3300016: Neck
+    3300018: Nose
+    3300020: Paw_left_04
+    3300022: Paw_left_05
+    3300024: Paw_left_06
+    3300026: Paw_left_finger_06
+    3300028: Paw_left_finger_07
+    3300030: Paw_left_finger_08
+    3300032: Paw_right_01
+    3300034: Paw_right_02
+    3300036: Paw_right_03
+    3300038: Paw_right_finger_01
+    3300040: Paw_right_finger_02
+    3300042: Paw_right_finger_03
+    3300044: Paw_right_finger_04
+    3300046: Paw_right_finger_05
+    3300048: Sphere01
+    3300050: Tail_01
+    3300052: Tail_02
+    3300054: Tail_03
+    3300056: Tail_04
+    3300058: Wing_left_01
+    3300060: Wing_left_02
+    3300062: Wing_left_finger1_01
+    3300064: Wing_left_finger1_02
+    3300066: Wing_left_finger2_01
+    3300068: Wing_left_finger2_02
+    3300070: Wing_left_finger2_03
+    3300072: Wing_left_finger3_01
+    3300074: Wing_left_finger3_02
+    3300076: Wing_left_finger3_03
+    3300078: Wing_left_finger4_01
+    3300080: Wing_left_finger4_02
+    3300082: Wing_left_finger4_3
+    3300084: Wing_left_finger5_01
+    3300086: Wing_left_finger5_02
+    3300088: Wing_left_finger5_03
+    3300090: Wing_left_hand
+    3300092: Wing_right_01
+    3300094: Wing_right_02
+    3300096: Wing_right_03
+    3300098: Wing_right_finger1_01
+    3300100: Wing_right_finger1_02
+    3300102: Wing_right_finger2_01
+    3300104: Wing_right_finger2_02
+    3300106: Wing_right_finger2_03
+    3300108: Wing_right_finger3_01
+    3300110: Wing_right_finger3_02
+    3300112: Wing_right_finger3_03
+    3300114: Wing_right_finger4_01
+    3300116: Wing_right_finger4_02
+    3300118: Wing_right_finger4_03
+    3300120: Wing_right_finger5_01
+    3300122: Wing_right_finger5_02
+    3300124: Wing_right_finger5_03
+    4300000: Circle01
+    4300002: Sphere01
+    4300004: Body
+    4300006: Body_back
+    4300008: Tail_01
+    4300010: Tail_02
+    4300012: Tail_03
+    4300014: Tail_04
+    4300016: Paw_right_01
+    4300018: Paw_right_02
+    4300020: Paw_right_03
+    4300022: Paw_right_finger_04
+    4300024: Paw_right_finger_03
+    4300026: Paw_right_finger_01
+    4300028: Paw_right_finger_02
+    4300030: Paw_left_04
+    4300032: Paw_left_05
+    4300034: Paw_left_06
+    4300036: Paw_right_finger_05
+    4300038: Paw_left_finger_06
+    4300040: Paw_left_finger_07
+    4300042: Paw_left_finger_08
+    4300044: Body_front
+    4300046: Wing_left_01
+    4300048: Wing_left_02
+    4300050: Wing_left_hand
+    4300052: Wing_left_finger2_01
+    4300054: Wing_left_finger2_02
+    4300056: Wing_left_finger2_03
+    4300058: Wing_left_finger3_01
+    4300060: Wing_left_finger3_02
+    4300062: Wing_left_finger3_03
+    4300064: Wing_left_finger4_01
+    4300066: Wing_left_finger4_02
+    4300068: Wing_left_finger4_3
+    4300070: Wing_left_finger5_01
+    4300072: Wing_left_finger5_02
+    4300074: Wing_left_finger5_03
+    4300076: Wing_left_finger1_01
+    4300078: Wing_left_finger1_02
+    4300080: Wing_right_01
+    4300082: Wing_right_02
+    4300084: Wing_right_03
+    4300086: Wing_right_finger2_01
+    4300088: Wing_right_finger2_02
+    4300090: Wing_right_finger2_03
+    4300092: Wing_right_finger3_01
+    4300094: Wing_right_finger3_02
+    4300096: Wing_right_finger3_03
+    4300098: Wing_right_finger4_01
+    4300100: Wing_right_finger4_02
+    4300102: Wing_right_finger4_03
+    4300104: Wing_right_finger5_01
+    4300106: Wing_right_finger5_02
+    4300108: Wing_right_finger5_03
+    4300110: Wing_right_finger1_01
+    4300112: Wing_right_finger1_02
+    4300114: Neck
+    4300116: Head
+    4300118: Jaw
+    4300120: Nose
+    4300122: Ear_left
+    4300124: Ear_right
+    4300126: Bat - Vampire
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Bat - Vampire
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bat - Vampire
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/Body_back
+        weight: 1
+      - path: Body/Body_back/Paw_left_04
+        weight: 1
+      - path: Body/Body_back/Paw_left_04/Paw_left_05
+        weight: 1
+      - path: Body/Body_back/Paw_left_04/Paw_left_05/Paw_left_06
+        weight: 1
+      - path: Body/Body_back/Paw_left_04/Paw_left_05/Paw_left_06/Paw_left_finger_07
+        weight: 1
+      - path: Body/Body_back/Paw_left_04/Paw_left_05/Paw_left_06/Paw_left_finger_07/Paw_left_finger_08
+        weight: 1
+      - path: Body/Body_back/Paw_left_04/Paw_left_05/Paw_left_06/Paw_right_finger_05
+        weight: 1
+      - path: Body/Body_back/Paw_left_04/Paw_left_05/Paw_left_06/Paw_right_finger_05/Paw_left_finger_06
+        weight: 1
+      - path: Body/Body_back/Paw_right_01
+        weight: 1
+      - path: Body/Body_back/Paw_right_01/Paw_right_02
+        weight: 1
+      - path: Body/Body_back/Paw_right_01/Paw_right_02/Paw_right_03
+        weight: 1
+      - path: Body/Body_back/Paw_right_01/Paw_right_02/Paw_right_03/Paw_right_finger_01
+        weight: 1
+      - path: Body/Body_back/Paw_right_01/Paw_right_02/Paw_right_03/Paw_right_finger_01/Paw_right_finger_02
+        weight: 1
+      - path: Body/Body_back/Paw_right_01/Paw_right_02/Paw_right_03/Paw_right_finger_04
+        weight: 1
+      - path: Body/Body_back/Paw_right_01/Paw_right_02/Paw_right_03/Paw_right_finger_04/Paw_right_finger_03
+        weight: 1
+      - path: Body/Body_back/Tail_01
+        weight: 1
+      - path: Body/Body_back/Tail_01/Tail_02
+        weight: 1
+      - path: Body/Body_back/Tail_01/Tail_02/Tail_03
+        weight: 1
+      - path: Body/Body_back/Tail_01/Tail_02/Tail_03/Tail_04
+        weight: 1
+      - path: Body/Body_front
+        weight: 1
+      - path: Body/Body_front/Neck
+        weight: 1
+      - path: Body/Body_front/Neck/Head
+        weight: 1
+      - path: Body/Body_front/Neck/Head/Ear_left
+        weight: 1
+      - path: Body/Body_front/Neck/Head/Ear_right
+        weight: 1
+      - path: Body/Body_front/Neck/Head/Jaw
+        weight: 1
+      - path: Body/Body_front/Neck/Head/Nose
+        weight: 1
+      - path: Body/Body_front/Wing_left_01
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger1_01
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger1_01/Wing_left_finger1_02
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger2_01
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger2_01/Wing_left_finger2_02
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger2_01/Wing_left_finger2_02/Wing_left_finger2_03
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger3_01
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger3_01/Wing_left_finger3_02
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger3_01/Wing_left_finger3_02/Wing_left_finger3_03
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger4_01
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger4_01/Wing_left_finger4_02
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger4_01/Wing_left_finger4_02/Wing_left_finger4_3
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger5_01
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger5_01/Wing_left_finger5_02
+        weight: 1
+      - path: Body/Body_front/Wing_left_01/Wing_left_02/Wing_left_hand/Wing_left_finger5_01/Wing_left_finger5_02/Wing_left_finger5_03
+        weight: 1
+      - path: Body/Body_front/Wing_right_01
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger1_01
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger1_01/Wing_right_finger1_02
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger2_01
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger2_01/Wing_right_finger2_02
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger2_01/Wing_right_finger2_02/Wing_right_finger2_03
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger3_01
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger3_01/Wing_right_finger3_02
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger3_01/Wing_right_finger3_02/Wing_right_finger3_03
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger4_01
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger4_01/Wing_right_finger4_02
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger4_01/Wing_right_finger4_02/Wing_right_finger4_03
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger5_01
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger5_01/Wing_right_finger5_02
+        weight: 1
+      - path: Body/Body_front/Wing_right_01/Wing_right_02/Wing_right_03/Wing_right_finger5_01/Wing_right_finger5_02/Wing_right_finger5_03
+        weight: 1
+      - path: Camera01
+        weight: 1
+      - path: Camera01.Target
+        weight: 1
+      - path: Camera02
+        weight: 1
+      - path: Camera02.Target
+        weight: 1
+      - path: Camera03
+        weight: 1
+      - path: Camera03.Target
+        weight: 1
+      - path: Camera04
+        weight: 1
+      - path: Camera04.Target
+        weight: 1
+      - path: Camera05
+        weight: 1
+      - path: Camera05.Target
+        weight: 1
+      - path: Camera06
+        weight: 1
+      - path: Camera06.Target
+        weight: 1
+      - path: Camera07
+        weight: 1
+      - path: Camera07.Target
+        weight: 1
+      - path: Camera08
+        weight: 1
+      - path: Camera08.Target
+        weight: 1
+      - path: Camera09
+        weight: 1
+      - path: Camera09.Target
+        weight: 1
+      - path: Camera10
+        weight: 1
+      - path: Camera10.Target
+        weight: 1
+      - path: Camera11
+        weight: 1
+      - path: Camera11.Target
+        weight: 1
+      - path: Circle01
+        weight: 1
+      - path: Direct01
+        weight: 1
+      - path: Direct01.Target
+        weight: 1
+      - path: Direct02
+        weight: 1
+      - path: Direct02.Target
+        weight: 1
+      - path: Direct03
+        weight: 1
+      - path: Direct03.Target
+        weight: 1
+      - path: Omni08
+        weight: 1
+      - path: Omni09
+        weight: 1
+      - path: Omni11
+        weight: 1
+      - path: Omni12
+        weight: 1
+      - path: Omni13
+        weight: 1
+      - path: Sphere01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
