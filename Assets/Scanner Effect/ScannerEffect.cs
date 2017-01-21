@@ -1,58 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 [ExecuteInEditMode]
-public class ScannerEffectDemo : MonoBehaviour
+public class ScannerEffect : MonoBehaviour
 {
 	public Transform ScannerOrigin;
 	public Material EffectMaterial;
-	public float ScanDistance;
-
+    public float MaxScanDistance = 100;
+	public float CurrentScanDistance = 0;
+    public float MinScanDistance = 0;
+    public float ScanSpeed = 50;
 	private Camera _camera;
 
-	//// Demo Code
-	//bool _scanning;
-	//Scannable[] _scannables;
+    bool scanning;
 
-	//void Start()
-	//{
-	//	_scannables = FindObjectsOfType<Scannable>();
- //   }
+    public void Scan()
+    {
+        if (!scanning)
+            StartCoroutine(DoScan());
+    }
 
-	//void Update()
-	//{
-	//	if (_scanning)
-	//	{
-	//		ScanDistance += Time.deltaTime * 50;
-	//		foreach (Scannable s in _scannables)
-	//		{
-	//			if (Vector3.Distance(ScannerOrigin.position, s.transform.position) <= ScanDistance)
-	//				s.Ping();
-	//		}
-	//	}
+    IEnumerator DoScan()
+    {
+        scanning = true;
+        List<Scannable> scannables = FindObjectsOfType<Scannable>().ToList();
+        CurrentScanDistance = 0;
 
-	//	if (Input.GetKeyDown(KeyCode.C))
-	//	{
-	//		_scanning = true;
-	//		ScanDistance = 0;
-	//	}
+        while (CurrentScanDistance < MaxScanDistance)
+        {
+            CurrentScanDistance += Time.deltaTime * ScanSpeed;
 
-	//	if (Input.GetMouseButtonDown(0))
-	//	{
-	//		Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-	//		RaycastHit hit;
+            for (int i = 0; i < scannables.Count; i++)
+            {
+                if (Vector3.Distance(ScannerOrigin.position, scannables[i].transform.position) <= CurrentScanDistance)
+                {
+                    scannables[i].Ping();
+                    scannables.RemoveAt(i--);
+                }
+            }
 
-	//		if (Physics.Raycast(ray, out hit))
-	//		{
-	//			_scanning = true;
-	//			ScanDistance = 0;
-	//			ScannerOrigin.position = hit.point;
-	//		}
-	//	}
-	//}
-	//// End Demo Code
+            yield return null;
+        }
 
-	void OnEnable()
+        CurrentScanDistance = 0;
+        scanning = false;
+    }
+
+    void OnEnable()
 	{
 		_camera = GetComponent<Camera>();
 		_camera.depthTextureMode = DepthTextureMode.Depth;
@@ -62,7 +58,7 @@ public class ScannerEffectDemo : MonoBehaviour
 	void OnRenderImage(RenderTexture src, RenderTexture dst)
 	{
 		EffectMaterial.SetVector("_WorldSpaceScannerPos", ScannerOrigin.position);
-		EffectMaterial.SetFloat("_ScanDistance", ScanDistance);
+		EffectMaterial.SetFloat("_ScanDistance", CurrentScanDistance);
 		RaycastCornerBlit(src, dst, EffectMaterial);
 	}
 
