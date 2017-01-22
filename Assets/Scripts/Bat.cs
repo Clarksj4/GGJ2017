@@ -9,11 +9,13 @@ public class Bat : MonoBehaviour
     public AudioSource pingSound;
 
     private CharacterController controller;
+    private ParticleSystem particles;
     private ScannerEffect sonar;
 
     void Awake()
     {
         controller = GetComponent<CharacterController>();
+        particles = GetComponentInChildren<ParticleSystem>();
         sonar = GetComponentInChildren<ScannerEffect>();
     }
 
@@ -46,6 +48,10 @@ public class Bat : MonoBehaviour
         // tell power up to be collected
         Pickup pickup = other.GetComponent<Pickup>();
         if (pickup != null)
+        {
             pickup.Vanish(other.transform.position + Vector3.down * 10);
+            particles.Play();
+        }
+            
     }
 }

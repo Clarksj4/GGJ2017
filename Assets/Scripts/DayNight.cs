@@ -11,6 +11,8 @@ public class DayNight : MonoBehaviour
     [HideInInspector]
     public float timeMultiplier = 1f;
 
+    public bool PermanentNight;
+
     float sunInitialIntensity;
 
     void Start()
@@ -37,7 +39,7 @@ public class DayNight : MonoBehaviour
         float intensityMultiplier = 1;
         if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f)
         {
-            intensityMultiplier = 0;
+            sun.enabled = false;
         }
         else if (currentTimeOfDay <= 0.25f)
         {

@@ -84,6 +84,7 @@ public class Pickup : MonoBehaviour
         Highlight.enabled = true;
         Highlight.intensity = 0;
         Highlight.range = HighlightRange;
+        sound.Stop();
         sound.Play();
 
         float time = 0;

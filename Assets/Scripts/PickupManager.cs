@@ -11,6 +11,7 @@ public class PickupManager : MonoBehaviour
     public Image pear;
     public Image avocado;
     public Image lemon;
+    public AudioSource winMusic;
     public GameObject winScreen;
 
     private List<Pickup> pickups;
@@ -52,7 +53,13 @@ public class PickupManager : MonoBehaviour
         if (pickups.Count == 0)
         {
             winScreen.SetActive(true);
+
+            AudioSource[] sounds = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource sound in sounds)
+                sound.enabled = false;
+            winMusic.Play();
         }
+            
             
             
         print(pickups.Count + " pickups left");
