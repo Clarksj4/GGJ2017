@@ -20,6 +20,6 @@ public class Timer : MonoBehaviour {
         {
             SceneManager.GetActiveScene(); SceneManager.LoadScene("LevelGood");
         }
-        timeDisplay.text = timeLeft.ToString("0.00");
+        timeDisplay.text = timeLeft.ToString("0");
     }
 }
