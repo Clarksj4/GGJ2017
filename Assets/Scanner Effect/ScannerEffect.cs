@@ -36,10 +36,13 @@ public class ScannerEffect : MonoBehaviour
 
             for (int i = 0; i < scannables.Count; i++)
             {
-                if (Vector3.Distance(ScannerOrigin.position, scannables[i].transform.position) <= CurrentScanDistance)
+                if (scannables[i] != null)
                 {
-                    scannables[i].Ping();
-                    scannables.RemoveAt(i--);
+                    if (Vector3.Distance(ScannerOrigin.position, scannables[i].transform.position) <= CurrentScanDistance)
+                    {
+                        scannables[i].Ping();
+                        scannables.RemoveAt(i--);
+                    }
                 }
             }
 
