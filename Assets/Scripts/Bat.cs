@@ -7,11 +7,12 @@ public class Bat : MonoBehaviour
     public float MaxSpeed = 12;
     public float MaxTurnSpeed = 65;
     public AudioSource pingSound;
+    public AudioSource pickupSound;
 
     private CharacterController controller;
     private ParticleSystem particles;
     private ScannerEffect sonar;
-
+    
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -51,6 +52,7 @@ public class Bat : MonoBehaviour
         {
             pickup.Vanish(other.transform.position + Vector3.down * 10);
             particles.Play();
+            pickupSound.Play();
         }
             
     }

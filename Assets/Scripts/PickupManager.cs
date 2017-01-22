@@ -55,7 +55,7 @@ public class PickupManager : MonoBehaviour
             winScreen.SetActive(true);
 
             AudioSource[] sounds = FindObjectsOfType<AudioSource>();
-            foreach (AudioSource sound in sounds)
+            foreach (AudioSource sound in sounds.Where(s => s != winMusic))
                 sound.enabled = false;
             winMusic.Play();
         }

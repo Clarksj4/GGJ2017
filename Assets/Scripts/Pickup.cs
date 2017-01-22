@@ -17,7 +17,7 @@ public class Pickup : MonoBehaviour
     public float HighlightRange = 4;
     public ParticleSystem PickupParticles;
     public Light Highlight;
-    public AudioSource pingSound;
+    public AudioSource PingSound;
 
     private Coroutine highlighting;
     private Coroutine vanishing;
@@ -84,8 +84,8 @@ public class Pickup : MonoBehaviour
         Highlight.enabled = true;
         Highlight.intensity = 0;
         Highlight.range = HighlightRange;
-        pingSound.Stop();
-        pingSound.Play();
+        PingSound.Stop();
+        PingSound.Play();
 
         float time = 0;
         while (time < HighlightDuration)
